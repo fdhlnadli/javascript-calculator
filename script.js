@@ -48,8 +48,9 @@ class Calculator {
           case '÷': // pembagian
             computation = prev / current
             break
-          // case '%': // persen
-          //   computation = current * 0.01
+          case '%': // per seratus
+            computation = prev * 0.01
+            break
           default:
             return
         }
@@ -91,6 +92,7 @@ class Calculator {
 
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
+const percentButtons = document.querySelector('[data-percent]');
 const equalsButton = document.querySelector('[data-equals]');
 const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
